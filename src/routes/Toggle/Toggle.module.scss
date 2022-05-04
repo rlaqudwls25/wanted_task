@@ -1,1 +1,39 @@
-@import '/src/styles/constants';
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+.toggleContainer {
+  @include flexbox.flexbox(_, center);
+  position: relative;
+  width: 460px;
+  height: 60px;
+  background-color: colors.$GRAYE;
+  border-radius: 70px;
+}
+
+.buttonWrapper {
+  width: 49%;
+  height: 50px;
+  margin-left: 5px;
+  background: colors.$WHITE;
+  border-radius: 70px;
+  transition: transform 1s;
+  transform: translateX(100%);
+}
+
+.buttonLeftWrapper {
+  width: 49%;
+  height: 50px;
+  margin-left: 5px;
+  background: colors.$WHITE;
+  border-radius: 70px;
+  transition: transform 1s;
+  transform: translateX(0);
+}
+
+.basic_title {
+  @include position.absolute(auto auto auto 100px);
+}
+
+.detail_title {
+  @include position.absolute(auto auto auto 320px);
+}
