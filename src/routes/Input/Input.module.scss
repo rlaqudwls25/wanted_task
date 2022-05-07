@@ -1,1 +1,88 @@
-@import '/src/styles/constants';
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+
+.loginWrapper {
+  @include flexbox.flexbox(center);
+  flex-direction: column;
+  width: 350px;
+  /* stylelint-disable-next-line length-zero-no-unit */
+  padding: 20px 0px;
+  background-color: #eeeeee;
+
+  .emailBox {
+    position: relative;
+    @include flexbox.flexbox(center);
+    flex-direction: column;
+    border-radius: 40px;
+
+    svg {
+      @include position.absolute(auto 10px 13px auto);
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      margin: 5px 3px;
+      font-size: 13px;
+      font-weight: bold;
+      color: colors.$BLACK;
+    }
+
+    input {
+      width: 300px;
+      height: 45px;
+      padding: 10px;
+      border: 1px solid rgb(214, 214, 215);
+      border-radius: 5px;
+
+      &:focus {
+        border: 1px solid rgb(165, 165, 165);
+      }
+    }
+  }
+
+  .warnBox {
+    width: 85%;
+
+    span {
+      margin-top: 3px;
+      font-size: 12px;
+      font-weight: normal;
+      color: colors.$RED;
+    }
+  }
+
+  .passWordBox {
+    position: relative;
+    @include flexbox.flexbox;
+    flex-direction: column;
+    border-radius: 40px;
+
+    svg {
+      @include position.absolute(auto 10px 13px auto);
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      margin: 5px 3px;
+      font-size: 13px;
+      font-weight: bold;
+      color: colors.$BLACK;
+    }
+
+    input {
+      width: 300px;
+      height: 45px;
+      padding: 10px;
+      border: 1px solid rgb(214, 214, 215);
+      border-radius: 5px;
+
+      &:focus {
+        border: 1px solid rgb(165, 165, 165);
+      }
+    }
+  }
+}

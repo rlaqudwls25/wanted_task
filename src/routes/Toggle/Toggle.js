@@ -11,7 +11,7 @@ const Toggle = () => {
   }
   return (
     <div className={styles.toggleContainer}>
-      <div className={check ? styles.buttonWrapper : `${styles.buttonLeftWrapper}`} />
+      <div className={check ? `${styles.buttonWrapper}` : `${styles.buttonLeftWrapper}`} />
       {ToggleName.map((item) => {
         return (
           <div

@@ -9,21 +9,11 @@ import Dropdown from './Dropdown/Dropdown'
 const index = () => {
   return (
     <div className={styles.app}>
-      <div>
-        <Toggle />
-      </div>
-      <div>
-        <Tab />
-      </div>
-      <div>
-        <Slider />
-      </div>
-      <div>
-        <Input />
-      </div>
-      <div>
-        <Dropdown />
-      </div>
+      <Toggle />
+      <Tab />
+      <Slider />
+      <Input />
+      <Dropdown />
     </div>
   )
 }

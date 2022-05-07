@@ -2,8 +2,9 @@
 @use '/src/styles/mixins/flexbox';
 
 .app {
-  @include flexbox.flexbox(center, center);
-  height: 400px;
+  @include flexbox.flexbox(around, center);
+  flex-direction: column;
+  height: 100vh;
   background-color: #dee3f9;
 }
 
